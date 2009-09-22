@@ -1,0 +1,47 @@
+T64Backup.sh
+============
+
+This script is a simple Shell based backup script for Tru64 Unix 5.1 systems.
+I wrote it in the pasts to backup to a local tapedrive. It's not perfect and
+maybe will never work for you ;)
+
+
+Features
+--------
+
+ * Shell script uses Tru64 Unix vdump and mt commands
+ * A simple tape lable for identification
+ * Send status emails
+
+
+Help
+----
+
+Usage: $0 [options]
+Options:
+	-c				Check tape for label and hostname and quit
+	-p				Only print the label from tape to stdout
+	-w				Only write label to tape
+	-x				Print the tape device status
+
+	-d "/etc"		Directories to backup (whitespace separated)
+	-f "/etc/motd"  Files to backup (whitespace separated)
+	-m "/ /usr"		Mountpoints to backup (whitespace separated)
+
+	-e "dbbackup"	Programm to execute bevor backup
+	
+	-D "day"		Set tape day
+	-H "hostname"	Set tape hostname	
+	-t "device"		Set tape device (/dev/ntape/tape0_d0)
+
+	-M				Prevent sending e-mail report (Default: send)
+	-R				Prevent rewind tape (Default: rewind)
+	-S				Prevent write to syslog (Default: write)
+	-U				Prevent unload tape (Default: unload)
+	-I				Prevent tape check of day and hostname (Default: check)
+
+	-h              Print this help text
+	-r				Print short intro howto restore backup
+	-v				Verbose output
+	-V				Print Version info
+	

@@ -1,0 +1,23 @@
+============================================================
+	------------
+	| TAPE LABEL |
+	------------
+
+	t64backup.sh version 0.1d
+
+Day: Monday
+Date: 2003-09-01	Time: 15:30
+
+Hostname: MyServer	Hardware: AlphaServer 800 5/500
+System: OSF1		OS-Version: V.5.1 (1885)
+
+Positions on tape:
+	#0 = tape label
+	#1 = /
+	#2 = /usr
+	#3 = /usr/home
+	#4 = /etc
+
+For a short manual howto restore a backup execute
+t64backup.sh with the -R switch.
+============================================================
